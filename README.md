@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☀️ Buscador de Clima con Next.js y OpenWeatherMap API
 
-## Getting Started
+¡Bienvenido al Buscador de Clima! Esta es una aplicación web moderna y responsiva construida con Next.js y Tailwind CSS que permite a los usuarios consultar el clima actual de cualquier ciudad del mundo utilizando la API de OpenWeatherMap.
 
-First, run the development server:
+Este proyecto fue desarrollado como parte de mi proceso de aprendizaje y consolidación de habilidades en el desarrollo front-end con React y Next.js.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Ver la Aplicación en Vivo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación está desplegada y disponible públicamente en Vercel.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[👉 Haz clic aquí para visitar el Buscador de Clima](https://vercel.com/bdhurtados-projects/weather-app-project)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Características Principales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Búsqueda de Clima:** Consulta el clima actual por nombre de ciudad.
+* **Información Detallada:** Muestra temperatura, sensación térmica, humedad, velocidad del viento y descripción del clima.
+* **Iconos de Clima Dinámicos:** Muestra iconos relevantes al estado del clima.
+* **Diseño Responsivo:** Interfaz adaptable a diferentes tamaños de pantalla (móviles, tabletas, escritorios) gracias a Tailwind CSS.
+* **Manejo de Errores:** Notificaciones claras para ciudades no encontradas o problemas de API.
 
-## Deploy on Vercel
+## 🛠️ Tecnologías Utilizadas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Next.js 13/14 (App Router):** Framework de React para el desarrollo de aplicaciones web full-stack, con renderizado híbrido.
+* **React:** Biblioteca JavaScript para construir interfaces de usuario.
+* **Tailwind CSS:** Framework CSS de primera utilidad para estilos rápidos y personalizables.
+* **Axios:** Cliente HTTP basado en promesas para hacer peticiones a la API.
+* **OpenWeatherMap API:** Fuente de datos climáticos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ Configuración y Ejecución Local
+
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
+
+### Prerrequisitos
+
+Asegúrate de tener instalado:
+
+* Node.js (versión 18 o superior recomendada)
+* npm (viene con Node.js) o Yarn
+
+### Pasos
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/BDHURTADO/weather-app-project.git](https://github.com/BDHURTADO/weather-app-project.git)
+    cd weather-app-project
+    ```
+    *(Asegúrate de que la URL de tu repositorio sea correcta.)*
+
+2.  **Instala las dependencias:**
+    ```bash
+    npm install
+    # o si usas yarn
+    # yarn install
+    ```
+
+3.  **Configura las variables de entorno:**
+    Crea un archivo llamado `.env.local` en la raíz del proyecto (al mismo nivel que `package.json`).
+    Dentro de este archivo, añade tu clave de API de OpenWeatherMap:
+    ```
+    NEXT_PUBLIC_OPENWEATHER_API_KEY=tu_clave_de_api_aqui_de_openweathermap
+    ```
+    *Reemplaza `tu_clave_de_api_aqui_de_openweathermap` con tu clave real (por ejemplo, `fa94bd9d2b963533eb8afcece9f88ede`).*
+    Puedes obtener una clave de API gratuita en [OpenWeatherMap](https://openweathermap.org/api).
+
+4.  **Ejecuta el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    # o si usas yarn
+    # yarn dev
+    ```
+    La aplicación estará disponible en `http://localhost:3000`.
+
+## 🤝 Contribuciones
+
+Las contribuciones, informes de errores y sugerencias son bienvenidos. Por favor, abre un "issue" o envía un "pull request".
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+## ✉️ Contacto
+
+Puedes contactarme a través de:
+
+GitHub:[BDHURTADO](https://github.com/BDHURTADO)
+LinkedIn: https://www.linkedin.com/in/bdhurtado13?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+
+---
