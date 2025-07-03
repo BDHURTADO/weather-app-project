@@ -52,17 +52,19 @@ export default function WeatherSearch() {
       );
       setWeather(response.data);
       setCity(''); // Limpiamos el input después de la búsqueda
-    } catch (err: any) {
+    } catch (err: unknown) { // <-- CAMBIO AQUÍ: de 'any' a 'unknown'
       if (axios.isAxiosError(err)) {
         if (err.response && err.response.status === 404) {
           setError('Ciudad no encontrada. Por favor, verifica el nombre.');
         } else {
           setError(`Error al obtener datos: ${err.message}`);
         }
-      } else {
+      } else if (err instanceof Error) { // <-- AÑADE ESTA LÍNEA para verificar que es un Error
         setError(`Ocurrió un error inesperado: ${err.message}`);
+      } else { // <-- Opcional: manejar si no es ni AxiosError ni Error
+        setError('Ocurrió un error inesperado.');
       }
-      console.error(err); // Para ver el error completo en la consola del navegador/servidor
+      console.error(err);
     } finally {
       setLoading(false);
     }
